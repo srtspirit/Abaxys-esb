@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:businessPartner xmlns:tns="http://abaxystechnologies.com/esb/CMBusinessPartner" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://abaxystechnologies.com/esb/CMBusinessPartner CMBusinessPartner.xsd ">
+  <tns:identificators>
+    <tns:identificator>
+      <tns:id>tns:id</tns:id>
+      <tns:systemName>tns:systemName</tns:systemName>
+    </tns:identificator>
+  </tns:identificators>
+  <tns:shortName>tns:shortName</tns:shortName>
+  <tns:fullName>tns:fullName</tns:fullName>
+  <tns:addresses>
+    <tns:address type="">
+      <tns:addressLine1>tns:addressLine1</tns:addressLine1>
+      <tns:addressLine2>tns:addressLine2</tns:addressLine2>
+      <tns:city>tns:city</tns:city>
+      <tns:province>tns:province</tns:province>
+      <tns:country>tns:country</tns:country>
+      <tns:zipCode>tns:zipCode</tns:zipCode>
+      <tns:addressName>tns:addressName</tns:addressName>
+      <tns:addressDescription>tns:addressDescription</tns:addressDescription>
+      <tns:note>tns:note</tns:note>
+    </tns:address>
+  </tns:addresses>
+  <tns:customer>
+    <tns:salesRepId>0</tns:salesRepId>
+    <tns:notes>tns:notes</tns:notes>
+    <tns:creditReferenceCode>tns:creditReferenceCode</tns:creditReferenceCode>
+    <tns:creditHoldLabel>tns:creditHoldLabel</tns:creditHoldLabel>
+    <tns:statementRequired>tns:statementRequired</tns:statementRequired>
+    <tns:statementBalanceForward>tns:statementBalanceForward</tns:statementBalanceForward>
+    <tns:defaultTerm>tns:defaultTerm</tns:defaultTerm>
+    <tns:creditLimit>tns:creditLimit</tns:creditLimit>
+    <tns:acceptBackOrder>tns:acceptBackOrder</tns:acceptBackOrder>
+    <tns:deliveryConditions>tns:deliveryConditions</tns:deliveryConditions>
+    <tns:collectLevelAmount>tns:collectLevelAmount</tns:collectLevelAmount>
+    <tns:marketId>tns:marketId</tns:marketId>
+    <tns:currency>tns:currency</tns:currency>
+    <tns:contacts>
+      <tns:contact type="">
+        <tns:personName>tns:personName</tns:personName>
+        <tns:contact type="">
+          <tns:contact>tns:contact</tns:contact>
+        </tns:contact>
+      </tns:contact>
+    </tns:contacts>
+  </tns:customer>
+  <tns:supplier>
+    <tns:salesRepId>0</tns:salesRepId>
+    <tns:notes>tns:notes</tns:notes>
+    <tns:creditReferenceCode>tns:creditReferenceCode</tns:creditReferenceCode>
+    <tns:creditHoldLabel>tns:creditHoldLabel</tns:creditHoldLabel>
+    <tns:statementRequired>tns:statementRequired</tns:statementRequired>
+    <tns:statementBalanceForward>tns:statementBalanceForward</tns:statementBalanceForward>
+    <tns:defaultTerm>tns:defaultTerm</tns:defaultTerm>
+    <tns:creditLimit>tns:creditLimit</tns:creditLimit>
+    <tns:acceptBackOrder>tns:acceptBackOrder</tns:acceptBackOrder>
+    <tns:deliveryConditions>tns:deliveryConditions</tns:deliveryConditions>
+    <tns:collectLevelAmount>tns:collectLevelAmount</tns:collectLevelAmount>
+    <tns:marketId>tns:marketId</tns:marketId>
+    <tns:currency>tns:currency</tns:currency>
+    <tns:contacts>
+      <tns:contact type="">
+        <tns:personName>tns:personName</tns:personName>
+        <tns:contact type="">
+          <tns:contact>tns:contact</tns:contact>
+        </tns:contact>
+      </tns:contact>
+    </tns:contacts>
+  </tns:supplier>
+</tns:businessPartner>

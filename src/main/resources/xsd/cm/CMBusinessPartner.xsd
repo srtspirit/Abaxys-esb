@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://abaxystechnologies.com/esb/CMBusinessPartner" xmlns:tns="http://abaxystechnologies.com/esb/CMBusinessPartner" elementFormDefault="qualified">
+	<element name="businessPartner" type="tns:CMBusinessPartner"/>
+	
+	<complexType name="CMBusinessPartner">
+		<sequence>
+			<element name="identificators">
+				<complexType>
+					<sequence>
+						<element name="identificator" type="tns:Identificator" maxOccurs="unbounded"/>
+					</sequence>
+				</complexType>
+			</element>
+			
+			<element name="shortName" type="string"/>
+			<element name="fullName" type="string"/>
+			
+			<element name="addresses">
+				<complexType>
+					<sequence>
+						<element name="address" type="tns:Address" maxOccurs="unbounded"/>
+					</sequence>
+				</complexType>
+			</element>
+			
+			<element name="customer" type="tns:BusinessUnit" minOccurs="0"/>
+			<element name="supplier" type="tns:BusinessUnit" minOccurs="0"/>
+		</sequence>
+	</complexType>
+	
+	<complexType name="Identificator">
+		<sequence>
+			<element name="id" type="string"/>
+			<element name="systemName" type="string"/>
+		</sequence>
+	</complexType>
+	
+	<complexType name="Address">
+		<sequence>
+			<element name="addressLine1" type="string"/>
+			<element name="addressLine2" type="string"/>
+			<element name="city" type="string"/>
+			<element name="province" type="string"/>
+			<element name="country" type="string"/>
+			<element name="zipCode" type="string"/>
+			<element name="addressName" type="string"/>
+			<element name="addressDescription" type="string"/>
+			<element name="note" type="string"/>
+		</sequence>
+		<attribute name="type" type="string"/>
+	</complexType>
+	
+	<complexType name="BusinessUnit">
+		<sequence>
+			<element name="salesRepId" type="long"/>
+			<element name="notes" type="string"/>
+			<element name="creditReferenceCode" type="string"/>
+			<element name="creditHoldLabel" type="string"/>
+			<element name="statementRequired" type="string"/>
+			<element name="statementBalanceForward" type="string"/>
+			<element name="defaultTerm" type="string"/>
+			<element name="creditLimit" type="string"/>
+			<element name="acceptBackOrder" type="string"/>
+			<element name="deliveryConditions" type="string"/>
+			<element name="collectLevelAmount" type="string"/>
+			<element name="marketId" type="string"/>
+			<element name="currency" type="string"/>
+			
+			<element name="contacts">
+				<complexType>
+					<sequence>
+						<element name="contact" type="tns:Contact" maxOccurs="unbounded"></element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	
+	<complexType name="Contact">
+		<sequence>
+			<element name="personName" type="string"/>
+			<element name="contact" type="tns:ContactType" maxOccurs="unbounded"/>
+		</sequence>
+		<attribute name="type" type="string"></attribute>
+	</complexType>
+	
+	<complexType name="ContactType">
+		<sequence>
+			<element name="contact" type="string"/>
+		</sequence>
+		<attribute name="type" type="string"/>
+	</complexType>
+</schema>

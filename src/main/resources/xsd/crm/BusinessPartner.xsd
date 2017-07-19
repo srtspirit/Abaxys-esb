@@ -3,66 +3,66 @@
   <xs:element name="businessPartner">
     <xs:complexType>
       <xs:all>
-      	<xs:element type="xs:long" name="id"/>
-        <xs:element type="xs:boolean" name="activeFlag"/>
-        <xs:element type="xs:string" name="address"/>
-        <xs:element type="xs:string" name="address2"/>
-        <xs:element type="xs:int" name="city"/>
-        <xs:element type="xs:string" name="cityName"/>
-        <xs:element type="xs:int" name="country"/>
-        <xs:element type="xs:string" name="countryName"/>
-        <xs:element type="xs:int" name="state"/>
-        <xs:element type="xs:string" name="stateName"/>
-        <xs:element type="xs:string" name="gps"/>
-        <xs:element type="xs:double" name="latitude"/>
-        <xs:element type="xs:double" name="longitude"/>
-        <xs:element type="xs:string" name="createdBy"/>
-        <xs:element type="xs:dateTime" name="createdDate"/>
-        <xs:element type="xs:string" name="currentSupplier"/>
-        <xs:element type="xs:string" name="customFlag"/>
-        <xs:element type="xs:string" name="customFlagName"/>
-        <xs:element type="xs:dateTime" name="date"/>
-        <xs:element type="xs:string" name="fax"/>
-        <xs:element type="xs:int" name="contId"/>
-        <xs:element type="xs:string" name="lead"/>
-        <xs:element type="xs:string" name="leadnotes"/>
-        <xs:element type="xs:string" name="leadreqemail"/>
-        <xs:element type="xs:string" name="leadreqid"/>
-        <xs:element type="xs:string" name="modifiedBy"/>
-        <xs:element type="xs:date" name="modifiedDate"/>
-        <xs:element type="xs:int" name="org"/>
-        <xs:element type="xs:string" name="privateFlag"/>
-        <xs:element type="xs:string" name="rep"/>
-        <xs:element type="xs:string" name="repName"/>
-        <xs:element type="xs:string" name="roleId"/>
-        <xs:element type="xs:int" name="source"/>
-        <xs:element type="xs:string" name="sourceName"/>
-        <xs:element type="xs:boolean" name="status"/>
-        <xs:element type="xs:string" name="statusName"/>
-        <xs:element type="xs:string" name="primaryDept"/>
-        <xs:element type="xs:string" name="primaryEmail"/>
-        <xs:element type="xs:string" name="primaryLastName"/>
-        <xs:element type="xs:string" name="primaryMobile"/>
-        <xs:element type="xs:string" name="primaryName"/>
-        <xs:element type="xs:string" name="primaryPhone"/>
-        <xs:element type="xs:string" name="primaryphoneExtension"/>
-        <xs:element type="xs:string" name="secondaryDept"/>
-        <xs:element type="xs:string" name="secondaryEmail"/>
-        <xs:element type="xs:string" name="secondaryLastName"/>
-        <xs:element type="xs:string" name="secondaryMobile"/>
-        <xs:element type="xs:string" name="secondaryName"/>
-        <xs:element type="xs:string" name="secondaryPhone"/>
-        <xs:element type="xs:string" name="secondaryphoneExtension"/>
-        <xs:element type="xs:string" name="thirdConDept"/>
-        <xs:element type="xs:string" name="thirdConEmail"/>
-        <xs:element type="xs:string" name="thirdConLastName"/>
-        <xs:element type="xs:string" name="thirdConMobile"/>
-        <xs:element type="xs:string" name="thirdConName"/>
-        <xs:element type="xs:string" name="thirdConPhone"/>
-        <xs:element type="xs:string" name="thirdConphoneExt"/>
-        <xs:element type="xs:string" name="website"/>
-        <xs:element type="xs:string" name="zipcode"/>
-        <xs:element type="xs:string" name="userId"/>
+      	<xs:element type="xs:long" name="id" minOccurs="0"/>
+        <xs:element type="xs:boolean" name="activeFlag" minOccurs="0"/>
+        <xs:element type="xs:string" name="address" minOccurs="0"/>
+        <xs:element type="xs:string" name="address2" minOccurs="0"/>
+        <xs:element type="xs:int" name="city" minOccurs="0"/>
+        <xs:element type="xs:string" name="cityName" minOccurs="0"/>
+        <xs:element type="xs:int" name="country" minOccurs="0"/>
+        <xs:element type="xs:string" name="countryName" minOccurs="0"/>
+        <xs:element type="xs:int" name="state" minOccurs="0"/>
+        <xs:element type="xs:string" name="stateName" minOccurs="0"/>
+        <xs:element type="xs:string" name="gps" minOccurs="0"/>
+        <xs:element type="xs:double" name="latitude" minOccurs="0"/>
+        <xs:element type="xs:double" name="longitude" minOccurs="0"/>
+        <xs:element type="xs:string" name="createdBy" minOccurs="0"/>
+        <xs:element type="xs:dateTime" name="createdDate" minOccurs="0"/>
+        <xs:element type="xs:string" name="currentSupplier" minOccurs="0"/>
+        <xs:element type="xs:string" name="customFlag" minOccurs="0"/>
+        <xs:element type="xs:string" name="customFlagName" minOccurs="0"/>
+        <xs:element type="xs:date" name="date" minOccurs="0"/>
+        <xs:element type="xs:string" name="fax" minOccurs="0"/>
+        <xs:element type="xs:int" name="contId" minOccurs="0"/>
+        <xs:element type="xs:string" name="lead" minOccurs="0"/>
+        <xs:element type="xs:string" name="leadnotes" minOccurs="0"/>
+        <xs:element type="xs:string" name="leadreqemail" minOccurs="0"/>
+        <xs:element type="xs:string" name="leadreqid" minOccurs="0"/>
+        <xs:element type="xs:string" name="modifiedBy" minOccurs="0"/>
+        <xs:element type="xs:date" name="modifiedDate" minOccurs="0"/>
+        <xs:element type="xs:int" name="org" minOccurs="0"/>
+        <xs:element type="xs:string" name="privateFlag" minOccurs="0"/>
+        <xs:element type="xs:string" name="rep" minOccurs="0"/>
+        <xs:element type="xs:string" name="repName" minOccurs="0"/>
+        <xs:element type="xs:string" name="roleId" minOccurs="0"/>
+        <xs:element type="xs:int" name="source" minOccurs="0"/>
+        <xs:element type="xs:string" name="sourceName" minOccurs="0"/>
+        <xs:element type="xs:boolean" name="status" minOccurs="0"/>
+        <xs:element type="xs:string" name="statusName" minOccurs="0"/>
+        <xs:element type="xs:string" name="primaryDept" minOccurs="0"/>
+        <xs:element type="xs:string" name="primaryEmail" minOccurs="0"/>
+        <xs:element type="xs:string" name="primaryLastName" minOccurs="0"/>
+        <xs:element type="xs:string" name="primaryMobile" minOccurs="0"/>
+        <xs:element type="xs:string" name="primaryName" minOccurs="0"/>
+        <xs:element type="xs:string" name="primaryPhone" minOccurs="0"/>
+        <xs:element type="xs:string" name="primaryphoneExtension" minOccurs="0"/>
+        <xs:element type="xs:string" name="secondaryDept" minOccurs="0"/>
+        <xs:element type="xs:string" name="secondaryEmail" minOccurs="0"/>
+        <xs:element type="xs:string" name="secondaryLastName" minOccurs="0"/>
+        <xs:element type="xs:string" name="secondaryMobile" minOccurs="0"/>
+        <xs:element type="xs:string" name="secondaryName" minOccurs="0"/>
+        <xs:element type="xs:string" name="secondaryPhone" minOccurs="0"/>
+        <xs:element type="xs:string" name="secondaryphoneExtension" minOccurs="0"/>
+        <xs:element type="xs:string" name="thirdConDept" minOccurs="0"/>
+        <xs:element type="xs:string" name="thirdConEmail" minOccurs="0"/>
+        <xs:element type="xs:string" name="thirdConLastName" minOccurs="0"/>
+        <xs:element type="xs:string" name="thirdConMobile" minOccurs="0"/>
+        <xs:element type="xs:string" name="thirdConName" minOccurs="0"/>
+        <xs:element type="xs:string" name="thirdConPhone" minOccurs="0"/>
+        <xs:element type="xs:string" name="thirdConphoneExt" minOccurs="0"/>
+        <xs:element type="xs:string" name="website" minOccurs="0"/>
+        <xs:element type="xs:string" name="zipcode" minOccurs="0"/>
+        <xs:element type="xs:string" name="userId" minOccurs="0"/>
       </xs:all>
     </xs:complexType>
   </xs:element>

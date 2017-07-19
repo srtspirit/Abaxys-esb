@@ -7,7 +7,7 @@ import java.util.List;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.dataformat.xmljson.XmlJsonDataFormat;
 import org.apache.camel.dataformat.xmljson.XmlJsonDataFormat.NamespacesPerElementMapping;
-import org.apache.xalan.xsltc.trax.TransformerFactoryImpl;
+//import org.apache.xalan.xsltc.trax.TransformerFactoryImpl;
 
 public class FromCRMBusinessPartnerUpdate extends RouteBuilder {
 
@@ -29,7 +29,7 @@ public class FromCRMBusinessPartnerUpdate extends RouteBuilder {
 			//.xmljson()
 			.log("${body}")
 			.to("file://hui?fileName=hui.xml")
-			.to("xslt://xslt/1.xsl?transformerFactory=#hui")
+			.to("xslt://xslt/crm/BuisinessPartner/prepareBusinessPartner.xsl?saxon=true")
 			.to("file://hui?fileName=hui2.xml")
 			.to("validator:xsd/crm/BusinessPartner.xsd");
 		System.out.println("the route is created");
