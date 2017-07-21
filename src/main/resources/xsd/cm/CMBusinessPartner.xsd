@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://abaxystechnologies.com/esb/CMBusinessPartner" xmlns:tns="http://abaxystechnologies.com/esb/CMBusinessPartner" elementFormDefault="qualified">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://abaxystechnologies.com/esb/CMBusinessPartner" xmlns:tns="http://abaxystechnologies.com/esb/CMBusinessPartner">
 	<element name="businessPartner" type="tns:CMBusinessPartner"/>
 	
 	<complexType name="CMBusinessPartner">
-		<sequence>
+		<all>
 			<element name="identificators">
 				<complexType>
 					<sequence>
@@ -12,7 +12,7 @@
 				</complexType>
 			</element>
 			
-			<element name="shortName" type="string"/>
+			<element name="shortName" type="string" minOccurs="0"/>
 			<element name="fullName" type="string"/>
 			
 			<element name="addresses">
@@ -25,7 +25,7 @@
 			
 			<element name="customer" type="tns:BusinessUnit" minOccurs="0"/>
 			<element name="supplier" type="tns:BusinessUnit" minOccurs="0"/>
-		</sequence>
+		</all>
 	</complexType>
 	
 	<complexType name="Identificator">
@@ -38,56 +38,57 @@
 	<complexType name="Address">
 		<sequence>
 			<element name="addressLine1" type="string"/>
-			<element name="addressLine2" type="string"/>
+			<element name="addressLine2" type="string" minOccurs="0"/>
 			<element name="city" type="string"/>
 			<element name="province" type="string"/>
-			<element name="country" type="string"/>
+			<element name="country" type="string" minOccurs="0"/>
 			<element name="zipCode" type="string"/>
-			<element name="addressName" type="string"/>
-			<element name="addressDescription" type="string"/>
-			<element name="note" type="string"/>
+			<element name="addressName" type="string" minOccurs="0"/>
+			<element name="addressDescription" type="string" minOccurs="0"/>
+			<element name="note" type="string" minOccurs="0"/>
 		</sequence>
 		<attribute name="type" type="string"/>
 	</complexType>
 	
 	<complexType name="BusinessUnit">
 		<sequence>
-			<element name="salesRepId" type="long"/>
-			<element name="notes" type="string"/>
-			<element name="creditReferenceCode" type="string"/>
-			<element name="creditHoldLabel" type="string"/>
-			<element name="statementRequired" type="string"/>
-			<element name="statementBalanceForward" type="string"/>
-			<element name="defaultTerm" type="string"/>
-			<element name="creditLimit" type="string"/>
-			<element name="acceptBackOrder" type="string"/>
-			<element name="deliveryConditions" type="string"/>
-			<element name="collectLevelAmount" type="string"/>
-			<element name="marketId" type="string"/>
-			<element name="currency" type="string"/>
+			<element name="salesRepId" type="string" minOccurs="0"/>
+			<element name="notes" type="string" minOccurs="0"/>
+			<element name="creditReferenceCode" type="string" minOccurs="0"/>
+			<element name="creditHoldLabel" type="string" minOccurs="0"/>
+			<element name="statementRequired" type="string" minOccurs="0"/>
+			<element name="statementBalanceForward" type="string" minOccurs="0"/>
+			<element name="defaultTerm" type="string" minOccurs="0"/>
+			<element name="creditLimit" type="string" minOccurs="0"/>
+			<element name="acceptBackOrder" type="string" minOccurs="0"/>
+			<element name="deliveryConditions" type="string" minOccurs="0"/>
+			<element name="collectLevelAmount" type="string" minOccurs="0"/>
+			<element name="marketId" type="string" minOccurs="0"/>
+			<element name="currency" type="string" minOccurs="0"/>
 			
 			<element name="contacts">
 				<complexType>
 					<sequence>
-						<element name="contact" type="tns:Contact" maxOccurs="unbounded"></element>
+						<element name="contactPerson" type="tns:ContactPerson" maxOccurs="unbounded"></element>
 					</sequence>
 				</complexType>
 			</element>
 		</sequence>
 	</complexType>
 	
-	<complexType name="Contact">
+	<complexType name="ContactPerson">
 		<sequence>
 			<element name="personName" type="string"/>
-			<element name="contact" type="tns:ContactType" maxOccurs="unbounded"/>
+			<element name="contact" type="tns:Contact" maxOccurs="unbounded"/>
 		</sequence>
 		<attribute name="type" type="string"></attribute>
 	</complexType>
 	
-	<complexType name="ContactType">
-		<sequence>
-			<element name="contact" type="string"/>
-		</sequence>
-		<attribute name="type" type="string"/>
+	<complexType name="Contact">
+		<simpleContent>
+			<extension base="string">
+				<attribute name="type" type="string"/>
+			</extension>
+		</simpleContent>
 	</complexType>
 </schema>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+				xmlns:crm="http://crm">
 
 	<xsl:template match="@*|node()">
 		<xsl:copy>
@@ -7,9 +8,9 @@
 		</xsl:copy>
 	</xsl:template>	
 	
-	<xsl:template match="createdDate">
-		<createdDate>
+	<xsl:template match="crm:createdDate">
+		<crm:createdDate>
 			<xsl:value-of select="replace(text(), ' ', 'T')"/>
-		</createdDate>
+		</crm:createdDate>
 	</xsl:template>
 </xsl:stylesheet>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:businessPartner xmlns:ns="http://abaxystechnologies.com/esb/CMBusinessPartner"
+                    xmlns:crm="http://crm">
+   <identificators>
+      <identificator>
+         <id>353</id>
+         <systemName>ESB.SYSTEM.CRM</systemName>
+      </identificator>
+   </identificators>
+   <fullName>Digi-Ink_</fullName>
+   <addresses>
+      <address>
+         <addressLine1>12180 Boul Industriel</addressLine1>
+         <addressLine2/>
+         <city>Montréal-est,</city>
+         <province>Quebec,</province>
+         <country>Canada,</country>
+         <zipCode>h1b 5r7</zipCode>
+      </address>
+   </addresses>
+   <customer>
+      <salesRepId>1df31577-d145-42cc-b1f2-e992acaf4f3d</salesRepId>
+      <notes/>
+      <contacts>
+         <contactPerson type="primary">
+            <personName>Diane</personName>
+            <contact type="phone">(514) 645-2307</contact>
+            <contact type="cellPhone">(514) 640-4202</contact>
+            <contact type="email">info@ink-tech.com</contact>
+         </contactPerson>
+      </contacts>
+   </customer>
+</ns:businessPartner>

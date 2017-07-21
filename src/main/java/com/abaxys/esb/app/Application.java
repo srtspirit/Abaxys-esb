@@ -8,6 +8,7 @@ import org.apache.camel.main.MainListenerSupport;
 import org.apache.camel.main.MainSupport;
 
 import com.abaxys.esb.route.in.FromCRMBusinessPartnerUpdate;
+import com.abaxys.esb.route.service.BusinesspartnerService;
 
 public class Application {
 
@@ -19,7 +20,9 @@ public class Application {
 		Main main = new Main();
 		main.addRouteBuilder(new FromCRMBusinessPartnerUpdate());
 		main.addMainListener(new Events());
-		main.bind("hui", factory);
+		//main.getCamelContexts().get(0).getProperties().put("org.apache.camel.xmlconverter.output.indent", "yes");
+		//main.bind("hui", factory);
+		main.addRouteBuilder(new BusinesspartnerService());
 		main.run();
 	}
 	
