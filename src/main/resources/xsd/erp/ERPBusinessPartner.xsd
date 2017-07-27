@@ -1,10 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ERPBusinessPartner" xmlns:tns="http://www.example.org/ERPBusinessPartner" elementFormDefault="qualified">
-	<element name="buisinessPartner" type=""/>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.abaxys.com/ERPBusinessPartner" xmlns:tns="http://www.abaxys.com/ERPBusinessPartner" elementFormDefault="qualified">
+	<element name="buisinessPartner" type="tns:businessPartner"/>
 	
 	<complexType name="businessPartner">
 		<all>
+			<element name="idVGB_BPAR" type="string"/>
+			<element name="VGB_BPAR_BPART" type="string"></element>
 			
+			<element name="customer" type="tns:businessUnit"></element>
 		</all>
+	</complexType>
+	
+	<complexType name="businessUnit">
+		<all>
+			<element name="VGB_CUST_BPNAM" type="string"/>
+			
+			<element name="addresses">
+				<complexType>
+					<sequence>
+						<element name="address" type="tns:Address" maxOccurs="unbounded"/>
+					</sequence>
+				</complexType>
+			</element>
+		</all>
+	</complexType>
+	
+	<complexType name="Address">
+		<all>
+			<element name="VGB_ADDR_ADNAM" type="string"/>
+			<element name="VGB_ADDR_DESCR" type="string"/>
+			<element name="VGB_ADDR_ADD01" type="string"/>
+			<element name="VGB_ADDR_ADD02" type="string"/>
+			<element name="VGB_ADDR_CITYN" type="string"/>
+			<element name="VGB_ADDR_PRSID" type="string"/>
+			<element name="VGB_ADDR_POSTC" type="string"/>
+			<element name="VGB_ADDR_SHINS" type="string"/>
+			
+			<element name="VGB_ADDR_TEL01" type="string"/>
+			<element name="VGB_ADDR_FAX01" type="string"/>
+			<element name="VGB_ADDR_CONT1" type="string"/>
+			<element name="VGB_ADDR_EMAIL" type="string"/>
+			
+			<element name="VGB_ADDR_TEL02" type="string"/>
+			<element name="VGB_ADDR_FAX02" type="string"/>
+			<element name="VGB_ADDR_CONT2" type="string"/>
+		</all>
+		<attribute name="type" type="string"/>
 	</complexType>
 </schema>
