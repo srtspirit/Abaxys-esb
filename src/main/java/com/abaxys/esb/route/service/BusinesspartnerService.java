@@ -1,7 +1,9 @@
 package com.abaxys.esb.route.service;
 
 import org.apache.camel.builder.RouteBuilder;
+import org.springframework.stereotype.Component;
 
+@Component
 public class BusinesspartnerService extends RouteBuilder {
 
 	@Override
