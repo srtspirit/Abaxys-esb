@@ -1,0 +1,6 @@
+abaxys:
+  esb:
+    jms:
+      brokerUrl: tcp://localhost:61616
+  erp:
+    restApiHost: www.sasadept.net:3080

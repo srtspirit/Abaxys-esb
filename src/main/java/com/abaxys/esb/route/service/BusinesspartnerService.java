@@ -5,11 +5,13 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class BusinesspartnerService extends RouteBuilder {
+	public static final String SERVICE_BP_QUEUE = "ESB.SERVICE.BUSINESSPARTNER";
+	public static final String OUT_BP_TOPIC = "ESB.OUT.ALL.BUSINESSPARTNER";
 
 	@Override
 	public void configure() throws Exception {
-		from("activemq:queue:ESB.SERVICE.BUSINESSPARTNER")
-			.to("activemq:topic:ESB.OUT.ALL.BUSINESSPARTNER");
+		from("activemq:queue:" + SERVICE_BP_QUEUE + "?connectionFactory=jmsConnectionFactory")
+			.to("activemq:topic:" + OUT_BP_TOPIC + "?connectionFactory=jmsConnectionFactory");
 	}
 
 }
