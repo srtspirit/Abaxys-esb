@@ -6,15 +6,15 @@
 	<xsl:template match="/cm:businessPartner">
 		<erp:buisinessPartner>
 			<VGB_BPAR_BPART>
-				<xsl:value-of select="fullName"></xsl:value-of>
+				<xsl:value-of select="cm:body/fullName"></xsl:value-of>
 			</VGB_BPAR_BPART>
 			
 			<customer>
 				<VGB_CUST_BPNAM>
-					<xsl:value-of select="fullName"/>
+					<xsl:value-of select="cm:body/fullName"/>
 				</VGB_CUST_BPNAM>
 				<addresses>
-					<xsl:for-each select="addresses/address">
+					<xsl:for-each select="cm:body/addresses/address">
 						<address>
 							<VGB_ADDR_ADD01>
 								<xsl:value-of select="addressLine1"/>

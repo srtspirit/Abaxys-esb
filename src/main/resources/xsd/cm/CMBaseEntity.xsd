@@ -1,0 +1,15 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://abaxystechnologies.com/esb" xmlns:tns="http://abaxystechnologies.com/esb">
+	<complexType name="BaseEntity">
+		<sequence>
+			<element name="header" form="qualified">
+				<complexType>
+					<sequence>
+						<element name="messageId" type="string"/>
+						<element name="correlationId" type="string" minOccurs="0"/>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</schema>

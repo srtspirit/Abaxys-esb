@@ -4,6 +4,7 @@
   <xs:element name="businessPartner">
     <xs:complexType>
       <xs:all>
+      	<xs:element type="xs:string" name="messageId"/>
       	<xs:element type="xs:long" name="id" minOccurs="0"/>
         <xs:element type="xs:boolean" name="activeFlag" minOccurs="0"/>
         <xs:element type="xs:string" name="address" minOccurs="0"/>

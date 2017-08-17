@@ -1,31 +1,44 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://abaxystechnologies.com/esb/CMBusinessPartner" xmlns:tns="http://abaxystechnologies.com/esb/CMBusinessPartner">
+<?xml version="1.1" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://abaxystechnologies.com/esb/CMBusinessPartner"
+		xmlns:tns="http://abaxystechnologies.com/esb/CMBusinessPartner"
+		xmlns:esb="http://abaxystechnologies.com/esb">
+	<import namespace="http://abaxystechnologies.com/esb" schemaLocation="CMBaseEntity.xsd"/>
 	<element name="businessPartner" type="tns:CMBusinessPartner"/>
 	
 	<complexType name="CMBusinessPartner">
-		<all>
-			<element name="identificators">
-				<complexType>
-					<sequence>
-						<element name="identificator" type="tns:Identificator" maxOccurs="unbounded"/>
-					</sequence>
-				</complexType>
-			</element>
-			
-			<element name="shortName" type="string" minOccurs="0"/>
-			<element name="fullName" type="string"/>
-			
-			<element name="addresses">
-				<complexType>
-					<sequence>
-						<element name="address" type="tns:Address" maxOccurs="unbounded"/>
-					</sequence>
-				</complexType>
-			</element>
-			
-			<element name="customer" type="tns:BusinessUnit" minOccurs="0"/>
-			<element name="supplier" type="tns:BusinessUnit" minOccurs="0"/>
-		</all>
+		<complexContent>
+			<extension base="esb:BaseEntity">
+				<sequence>
+					<element name="body" form="qualified">
+						<complexType>
+							<all>
+								<element name="identificators">
+									<complexType>
+										<sequence>
+											<element name="identificator" type="tns:Identificator" maxOccurs="unbounded"/>
+										</sequence>
+									</complexType>
+								</element>
+								
+								<element name="shortName" type="string" minOccurs="0"/>
+								<element name="fullName" type="string"/>
+								
+								<element name="addresses">
+									<complexType>
+										<sequence>
+											<element name="address" type="tns:Address" maxOccurs="unbounded"/>
+										</sequence>
+									</complexType>
+								</element>
+								
+								<element name="customer" type="tns:BusinessUnit" minOccurs="0"/>
+								<element name="supplier" type="tns:BusinessUnit" minOccurs="0"/>
+							</all>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
 	</complexType>
 	
 	<complexType name="Identificator">

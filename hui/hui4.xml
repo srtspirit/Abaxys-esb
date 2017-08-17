@@ -1,1 +1,21 @@
-{"VGB_BPAR_BPART":"Digi-Ink_","customer":{"VGB_CUST_BPNAM":"Digi-Ink_","addresses":[{"VGB_ADDR_ADD01":"12180 Boul Industriel","VGB_ADDR_ADD02":[],"VGB_ADDR_CITYN":"Montréal-est,","VGB_ADDR_PRSID":"Quebec,","VGB_ADDR_POSTC":"h1b 5r7","VGB_ADDR_TEL01":"(514) 645-2307","VGB_ADDR_FAX01":[],"VGB_ADDR_CONT1":"Diane","VGB_ADDR_EMAIL":"info@ink-tech.com"}]}}
+<?xml version="1.0" encoding="UTF-8"?>
+<erp:buisinessPartner xmlns:erp="http://www.abaxys.com/ERPBusinessPartner"
+                      xmlns:cm="http://abaxystechnologies.com/esb/CMBusinessPartner">
+   <VGB_BPAR_BPART>Digi-Ink</VGB_BPAR_BPART>
+   <customer>
+      <VGB_CUST_BPNAM>Digi-Ink</VGB_CUST_BPNAM>
+      <addresses>
+         <address>
+            <VGB_ADDR_ADD01>12180 Boul Industriel</VGB_ADDR_ADD01>
+            <VGB_ADDR_ADD02/>
+            <VGB_ADDR_CITYN>MontrÃ©al-est,</VGB_ADDR_CITYN>
+            <VGB_ADDR_PRSID>Quebec,</VGB_ADDR_PRSID>
+            <VGB_ADDR_POSTC>h1b 5r7</VGB_ADDR_POSTC>
+            <VGB_ADDR_TEL01>(514) 645-2307</VGB_ADDR_TEL01>
+            <VGB_ADDR_FAX01/>
+            <VGB_ADDR_CONT1>Diane</VGB_ADDR_CONT1>
+            <VGB_ADDR_EMAIL>info@ink-tech.com</VGB_ADDR_EMAIL>
+         </address>
+      </addresses>
+   </customer>
+</erp:buisinessPartner>
