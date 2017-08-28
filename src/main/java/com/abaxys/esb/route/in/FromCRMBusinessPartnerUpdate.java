@@ -6,8 +6,10 @@ import java.util.List;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.dataformat.xmljson.XmlJsonDataFormat;
 import org.apache.camel.dataformat.xmljson.XmlJsonDataFormat.NamespacesPerElementMapping;
+import org.apache.camel.processor.validation.SchemaValidationException;
 import org.springframework.stereotype.Component;
 
+import com.abaxys.esb.exception.ExceptionHandler;
 import com.abaxys.esb.route.service.BusinesspartnerService;
 
 
@@ -24,6 +26,15 @@ public class FromCRMBusinessPartnerUpdate extends RouteBuilder {
 		XmlJsonDataFormat xmljson = new XmlJsonDataFormat();
 		xmljson.setRootName("businessPartner");
 		xmljson.setNamespaceMappings(list);
+		
+		onException(SchemaValidationException.class)
+		.bean(ExceptionHandler.class)
+		.to("activemq:queue: DLQ?connectionFactory=jmsConnectionFactory");
+		
+		onException(Exception.class)
+		.maximumRedeliveries(3).redeliveryDelay(3000)
+		.bean(ExceptionHandler.class)
+		.to("activemq:queue: DLQ?connectionFactory=jmsConnectionFactory");
 		
 		from("activemq:queue:" + INCOMING_BP_QUEUE + "?connectionFactory=jmsConnectionFactory")
 			.unmarshal(xmljson)
